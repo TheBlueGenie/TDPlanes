@@ -12,6 +12,11 @@ radius = 48.3271
 [node name="Player" index="0" instance=ExtResource( 1 )]
 
 script = ExtResource( 2 )
+min_speed = 50
+max_speed = 150
+throttle_inc = 1
+num_guns = 1
+gun_offset = 0
 
 [node name="Sprite" parent="." index="0"]
 

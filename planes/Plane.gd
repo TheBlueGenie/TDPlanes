@@ -1,11 +1,13 @@
 extends KinematicBody2D
 
-var min_speed = 50
-var max_speed = 150
-var throttle_inc = 1
+export (int) var min_speed = 50
+export (int) var max_speed = 150
+export (int) var throttle_inc = 1
+export (int) var num_guns = 1
+export (int) var gun_offset = 0
+
 var curr_speed = 0
 var rotation_speed = 1
-
 var velocity = Vector2()
 var can_shoot = true
 var alive = true

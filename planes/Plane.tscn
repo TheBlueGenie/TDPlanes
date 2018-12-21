@@ -9,9 +9,25 @@ collision_layer = 1
 collision_mask = 1
 collision/safe_margin = 0.08
 script = ExtResource( 1 )
+min_speed = 50
+max_speed = 150
+throttle_inc = 1
+num_guns = 1
+gun_offset = 0
+gun_cooldown = 1
+Bullet = null
 
 [node name="Sprite" type="Sprite" parent="." index="0"]
 
 [node name="Collision" type="CollisionShape2D" parent="." index="1"]
+
+[node name="GunTimer" type="Timer" parent="." index="2"]
+
+process_mode = 1
+wait_time = 1.0
+one_shot = true
+autostart = false
+
+[connection signal="timeout" from="GunTimer" to="." method="_on_GunTimer_timeout"]
 
 

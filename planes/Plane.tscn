@@ -2,31 +2,33 @@
 
 [ext_resource path="res://planes/Plane.gd" type="Script" id=1]
 
-[node name="Plane" type="KinematicBody2D" index="0"]
+[node name="Plane" type="KinematicBody2D"]
 
 input_pickable = false
 collision_layer = 1
 collision_mask = 1
 collision/safe_margin = 0.08
 script = ExtResource( 1 )
-min_speed = 50
-max_speed = 150
+min_speed = 25
+max_speed = 50
 throttle_inc = 1
-num_guns = 1
-gun_offset = 0
-gun_cooldown = 1
+gun_cooldown = 1.0
 Bullet = null
 
 [node name="Sprite" type="Sprite" parent="." index="0"]
 
 [node name="Collision" type="CollisionShape2D" parent="." index="1"]
 
-[node name="GunTimer" type="Timer" parent="." index="2"]
+[node name="Collision1" type="CollisionShape2D" parent="." index="2"]
+
+[node name="GunTimer" type="Timer" parent="." index="3"]
 
 process_mode = 1
 wait_time = 1.0
 one_shot = true
 autostart = false
+
+[node name="Guns" type="Node2D" parent="." index="4"]
 
 [connection signal="timeout" from="GunTimer" to="." method="_on_GunTimer_timeout"]
 

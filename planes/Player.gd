@@ -23,14 +23,7 @@ func control(delta):
 	
 	if Input.is_action_just_pressed('Shoot') and can_shoot:
 		shoot(delta)
-		can_shoot = false
-		$GunTimer.start()
 		
 
-func shoot(delta):
-	var plane_center = $Sprite.get_width / 2
-	
-	if num_guns == 1:
-		pass
-	elif num_guns == 2:
-		pass
+func _on_Plane_shoot():
+	pass # replace with function body
